@@ -2,24 +2,12 @@
   /**********************************************************************************
   *
   * LHC ring version STUDY in MAD X SEQUENCE format
-  * Generated the 07-MAR-2018 15:24:55 from LHCLAYOUT@EDMSDB Database
+  * Generated the 14-MAR-2018 14:05:34 from LHCLAYOUT@EDMSDB Database
   *
   * Edited by R. De Maria:
   *  set TAN lengths to 0 to avoid negative drifts with ZDC elements
-  *  set some value for Imax_MSI[AB] to be checked
-  *  re-added missing Kmin, Kmax, Imax for MBW, MBXW
-  *  `layout_id` replaced by `slot_id` for madx compatibility
-  *  correct many missing commas before `from`
-  *  few BPM with the same name: BPMSX.4L2.B1:BPMSX003, BPMS.2L2.B1:BPMS_003, ...
-  *       003 element discarded since no chance in the machine (Joel Albertone)
-  *  Reverted l.MQSX, l.MCBH, l.MCBH_UNPLUGGED to the original value (why changed???)
-  *  Why mech_sep of MGMWV.C5R4.B2 changed?
-  *  TCSPM.A4R7.B2 overlapping with TCSPM.D4R7.B2, removing TCSPM.A4R7.B2
+  *  Reverted l.MQSX, l.MCBH, l.MCBH_UNPLUGGED to the original value (different in official drawings)
   *
-  * Remaining issues:
-  *  TCTPH.4R5.B2 mech_sep not correct
-  *  TCL.4L5.B2   mech_sep not correct
-  *  TCSPM084 type not used
   ***********************************************************************************/
 
 
@@ -604,9 +592,7 @@ BPMSI002 : MONITOR, L := l.BPMSI002;
 BPMSW002 : MONITOR, L := l.BPMSW002;
 BPMSX001 : MONITOR, L := l.BPMSX001;
 BPMSX002 : MONITOR, L := l.BPMSX002;
-BPMSX003 : MONITOR, L := l.BPMSX003;
 BPMSY : MONITOR, L := l.BPMSY;
-BPMS_003 : MONITOR, L := l.BPMS_003;
 BPMWA : MONITOR, L := l.BPMWA;
 BPMWB : MONITOR, L := l.BPMWB;
 BPMWC : MONITOR, L := l.BPMWC;
@@ -744,7 +730,6 @@ TCPCV : RCOLLIMATOR, L := l.TCPCV;
 TCSG : RCOLLIMATOR, L := l.TCSG;
 TCSP : RCOLLIMATOR, L := l.TCSP;
 TCSPM : RCOLLIMATOR, L := l.TCSPM;
-TCSPM084 : RCOLLIMATOR, L := l.TCSPM084;
 TCTPH : RCOLLIMATOR, L := l.TCTPH;
 TCTPV : RCOLLIMATOR, L := l.TCTPV;
 TDI : RCOLLIMATOR, L := l.TDI;
