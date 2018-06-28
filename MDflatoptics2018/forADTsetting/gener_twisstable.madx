@@ -1,0 +1,87 @@
+! S. Fartoukh May 2015
+! MAD job to genere twiss table of all IRs: IR4 specifically in this file
+
+Option,  warn,info;
+
+System,"ln -fns /afs/cern.ch/eng/lhc/optics/runII/2018 db2018";
+System,"ln -fns /afs/cern.ch/eng/lhc/optics/runII/2018/MDflatoptics2018 opticsdir";
+
+!!!!!Call sequence V6.503 
+Option, -echo,-warn,-info;
+call,file="db2018/lhc_as-built.seq";
+
+!some macro facilities
+valueXing : macro = {
+value,on_x1,on_sep1,on_o1,on_a1,on_oh1,on_ov1;
+value,on_x5,on_sep5,on_o5,on_a5,on_oh5,on_ov5;
+value,on_x2,on_sep2,on_o2,on_a2,on_oh2,on_ov2,on_oe2;
+value,on_x8,on_sep8,on_o8,on_a8,on_oh8,on_ov8,on_oe8;
+value,on_disp,on_alice,on_lhcb;
+value,phi_IR1,phi_IR2,phi_IR5,phi_IR8;
+value,on_disp;
+};
+
+set0Xing : macro = {
+on_x1:=0;on_sep1:=0;on_o1=0;on_a1=0;on_oh1=0;on_ov1=0;
+on_x2:=0;on_sep2:=0;on_o2=0;on_a2=0;on_oe2=0;on_oh2=0;on_ov2=0;on_alice:=0;
+on_x5:=0;on_sep5:=0;on_o5=0;on_a5=0;on_oh5=0;on_ov5=0;
+on_x8:=0;on_sep8:=0;on_o8=0;on_a8=0;on_oe8=0;on_oh8=0;on_ov8=0;on_lhcb:=-0;
+on_disp:=0;
+on_sol_atlas=0;on_sol_alice=0;on_sol_cms=0;
+exec valueXing;
+};
+
+ !!!! Beam definition
+nrj =6500;  ! Beam energy [GeV]
+value,nrj;
+Beam,particle=proton,sequence=lhcb1,energy=nrj,NPART=1.15E11,sige=4.5e-4;
+Beam,particle=proton,sequence=lhcb2,energy=nrj,bv = -1,NPART=1.15E11,sige=4.5e-4;         
+
+
+tabgener(opticsfile,NIR,BIM) : macro = {
+call,file=opticsdir/opticsfile; exec set0Xing;
+use,sequence=lhcBIM;
+savebeta,label=birNIRBIM,place=s.ds.lNIR.BIM;
+twiss;
+birNIRBIM->mux=0;birNIRBIM->muy=0;
+use,sequence=lhcBIM,range=s.ds.lNIR.BIM/e.ds.rNIR.BIM;
+select,flag=twiss,clear;
+!select,flag=twiss,column=NAME,S,BETX,BETY,ALFX,ALFY,MUX,MUY,DX,DY,DPX,DPY,X,Y,PX,PY,DDX,DDY,DDPX,DDPY;
+select,flag=twiss,column=NAME,S,BETX,BETY,MUX,MUY;
+twiss,beta0=birNIRBIM,file=twiss.irNIR.BIM__opticsfile;
+plot,colour=100,noversion=true,title=opticsfile.BIM,table=twiss,haxis=s,vaxis1=betx,bety,vaxis2=Dx;
+};
+
+exec tabgener(opticsfile.1,4,b1);exec tabgener(opticsfile.1,4,b2);
+exec tabgener(opticsfile.2,4,b1);exec tabgener(opticsfile.2,4,b2);
+exec tabgener(opticsfile.3,4,b1);exec tabgener(opticsfile.3,4,b2);
+exec tabgener(opticsfile.4,4,b1);exec tabgener(opticsfile.4,4,b2);
+exec tabgener(opticsfile.5,4,b1);exec tabgener(opticsfile.5,4,b2);
+exec tabgener(opticsfile.6,4,b1);exec tabgener(opticsfile.6,4,b2);
+exec tabgener(opticsfile.7,4,b1);exec tabgener(opticsfile.7,4,b2);
+exec tabgener(opticsfile.8,4,b1);exec tabgener(opticsfile.8,4,b2);
+exec tabgener(opticsfile.9,4,b1);exec tabgener(opticsfile.9,4,b2);
+exec tabgener(opticsfile.10,4,b1);exec tabgener(opticsfile.10,4,b2);
+exec tabgener(opticsfile.11,4,b1);exec tabgener(opticsfile.11,4,b2);
+exec tabgener(opticsfile.12,4,b1);exec tabgener(opticsfile.12,4,b2);
+exec tabgener(opticsfile.13,4,b1);exec tabgener(opticsfile.13,4,b2);
+exec tabgener(opticsfile.14,4,b1);exec tabgener(opticsfile.14,4,b2);
+exec tabgener(opticsfile.15,4,b1);exec tabgener(opticsfile.15,4,b2);
+exec tabgener(opticsfile.16,4,b1);exec tabgener(opticsfile.16,4,b2);
+exec tabgener(opticsfile_flattele60cm.17,4,b1);exec tabgener(opticsfile_flattele60cm.17,4,b2);
+exec tabgener(opticsfile_flattele60cm.18,4,b1);exec tabgener(opticsfile_flattele60cm.18,4,b2);
+exec tabgener(opticsfile_flattele60cm.19,4,b1);exec tabgener(opticsfile_flattele60cm.19,4,b2);
+exec tabgener(opticsfile_flattele60cm.20,4,b1);exec tabgener(opticsfile_flattele60cm.20,4,b2);
+exec tabgener(opticsfile_flattele60cm.21,4,b1);exec tabgener(opticsfile_flattele60cm.21,4,b2);
+exec tabgener(opticsfile_flattele60cm.22,4,b1);exec tabgener(opticsfile_flattele60cm.22,4,b2);
+exec tabgener(opticsfile_flattele60cm.23,4,b1);exec tabgener(opticsfile_flattele60cm.23,4,b2);
+exec tabgener(opticsfile_flattele60cm.24,4,b1);exec tabgener(opticsfile_flattele60cm.24,4,b2);
+exec tabgener(opticsfile_flattele60cm.25,4,b1);exec tabgener(opticsfile_flattele60cm.25,4,b2);
+
+
+!!system,"mv twiss.ir4* opticsdir/forADTsetting/.";
+!!system,"mv madx.ps    opticsdir/forADTsetting/.";
+system,"rm db2018";
+system,"rm opticsdir";
+
+stop;

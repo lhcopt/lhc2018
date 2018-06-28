@@ -1,13 +1,13 @@
 !S. Fartoukh, readme file for the 2018 flat optics MDs, 17/05/2018
 
 *** SHORT DESCRIPTION
-a) The ramp is a clone of the 2017 nominal ramp (beta* = 1 m EOR):
+a) The ramp is a clone of the 2018 nominal ramp (beta* = 1 m EOR):
 - opticsfile.1 to opticsfile.14
-- LSA Beam Process RAMP-SQUEEZE-6.5TeV-ATS-1m-2017_V3_V1_TELE-ATSFlat_MD4
+- LSA Beam Process under construction
 
 b) The crossing plane rotation in IR1/5 takes place EoR at cst beta*=1m:
 - opticsfile.14
-- LSA Beam Process BUMPS-INVERSION-2017_V1
+- LSA Beam Process BP BUMPS-INVERSION-2018_V1
 
 c) A short pre-squeeze sequence down to beta*=65 cm follows 
 - opticsfile.14 to opticsfile.16
@@ -22,15 +22,25 @@ e) The second flat telescopic squeeze reduces beta* to 30/12 cm at IP1 and 12/30
 - LSA Beam Process SQUEEZE-6.5TeV-ATS-60_15cm-30_12cm-2017_V1
 
 **** DEFAULT SETTINGS for KNOB values:
-nrj defined to 6.5 TeV in all optics files
-tunes matched to 62.31/60.32 for all optics files
-chroma matched to 2 units for all optics
-Crossing plane rotation implemented, as of opticsfile.15 (beta*<=80 cm), namely, H/V crossing in IR1/5 with phi_IR1:=0/phi_IR5:=-90 (instead of phi_IR1:=90/phi_IR5:=0 at larger beta*)
-IP crossing knob (on_x1/2/5/6) calibrated in microrad and set to the end of ramp in all optics files (namely, on_x1=on_x5=150, on_x2=200, on_x8=-250)
-IP parallel sep knob (on_sep1/2/5/8) calibrated in mm and set to the end of ramp  value in all optics files (namely, on_sep1=-0.55, on_sep5=0.55,on_sep2=1, on_sep8=-1)
-IP shift knob (on_oh/v/1/2/5/8) calibrated in mm set to the collision value in all optics files, namely on_ov2=-2 (Alice IP shift), and on_ov5=-1.8 (CMS IP shift)
+a) Energy defined to 6.5 TeV in all optics files
 
-**** OPTICS FILE NAMING CONVENTION (for upload in LSA, only files with "_LSA" suffix should be used)
+b) Tunes matched to 62.31/60.32 for all optics files
+
+c) Chroma matched to 2 units for all optics
+
+d) Crossing plane rotation implemented, as of opticsfile.15 (beta*<=80 cm), 
+   namely, H/V crossing in IR1/5, defined with phi_IR1:=0/phi_IR5:=-90 (instead of phi_IR1:=90/phi_IR5:=0 at larger beta*)
+   
+e) IP crossing knob (on_x1/2/5/6) calibrated in microrad and set to default values in all optics files
+   (namely, on_x1=on_x5=150, on_x2=200, on_x8=-250)
+   
+f) IP parallel sep knob (on_sep1/2/5/8) calibrated in mm and set to default values in all optics files
+   (namely, on_sep1=-0.55, on_sep5=0.55,on_sep2=1, on_sep8=-1)
+   
+g) IP shift knob (on_oh/v/1/2/5/8) calibrated in mm set to the collision value in all optics files,
+   namely on_ov2=-2 (Alice IP shift), and on_ov5=-1.8 (CMS IP shift)
+
+**** OPTICS FILE NAMING CONVENTION  !!!!!!! for upload in LSA, only files with "_LSA" suffix should be used !!!!!
 opticsfile.1         	      : beta*x-y_IP1/2/5/8=  (11.000 -11.000) / 10.000 / (11.000 -11.000) /10.000 ; ! Injection (with new IR4-b1 optics with Q8.L4b1 increased up to 197A for stability issue)  			    
 opticsfile.2         	      : beta*x-y_IP1/2/5/8=  ( 9.700 - 9.700) / 10.000 / ( 9.700 - 9.700) / 9.700 ; ! Combined ramp and squeeze (including roll back to old ATS compatible IR4-b1 optics)	
 opticsfile.3         	      : beta*x-y_IP1/2/5/8=  ( 9.200 - 9.200) / 10.000 / ( 9.200 - 9.200) / 9.200 ; ! Combined ramp and squeeze (at constant IR4 optics)	   

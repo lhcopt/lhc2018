@@ -1,0 +1,60 @@
+!S. Fartoukh, readme file for the 2018 round optics MDs, 24/05/2018
+
+*** SHORT DESCRIPTION
+a) The ramp is NEW: Combined Ramp and Double Squeeze (CRDS)
+- opticsfile.1 to opticsfile.18
+-> opticsfile.1  (inj)   to opticsfile.11 (2.30 m) are nominal pre-squeezed optics
+-> opticsfile.12 (2.0 m) to opticsfile.18 (0.65 m) describe a tele-squeeze to reach a tele-index of 2/0.65 ~ 3 at the end of ramp
+- LSA Beam Process under construction
+
+b) The squeeze is new (restarting the pre-squeeze sequence from 2.0 m to 77 cm, at constant tele-index)
+- opticsfile.18 (65.000 cm) to opticsfile.25 (25.025 cm = 0.65/2 * 77 cm)
+- LSA Beam Process under construction
+
+
+**** DEFAULT SETTINGS for KNOB values:
+a) Energy defined to 6.5 TeV in all optics files
+
+b) Tunes matched to 62.31/60.32 for all optics files
+
+c) Chroma matched to 2 units for all optics
+   
+d) IP crossing knob (on_x1/2/5/6) calibrated in microrad and set to end of ramp values in all optics files
+   (namely, on_x1=on_x5=160, on_x2=200, on_x8=-250)
+   
+e) IP parallel sep knob (on_sep1/2/5/8) calibrated in mm and set to end of ramp values in all optics files
+   (namely, on_sep1=-0.55, on_sep5=0.55,on_sep2=1, on_sep8=-1)
+   
+g) IP shift knob (on_oh/v/1/2/5/8) calibrated in mm set to the collision value in all optics files,
+   namely on_ov2=-2 (Alice IP shift), and on_ov5=-1.8 (CMS IP shift)
+
+**** OPTICS FILE NAMING CONVENTION  !!!!!!! for upload in LSA, only files with "_LSA" suffix should be used !!!!!
+opticsfile.1    : beta*_IP1/2/5/8=  11.00000  / 10.000 / 11.00000 /10.000 ; ! Nominal injection optics  		  
+opticsfile.2    : beta*_IP1/2/5/8=   9.70000  / 10.000 /  9.70000 / 9.700 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 9.70 m)	
+opticsfile.3    : beta*_IP1/2/5/8=   9.20000  / 10.000 /  9.20000 / 9.200 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 9.20 m)	   
+opticsfile.4    : beta*_IP1/2/5/8=   8.50000  / 10.000 /  8.50000 / 8.500 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 8.50 m)	      
+opticsfile.5    : beta*_IP1/2/5/8=   7.40000  / 10.000 /  7.40000 / 7.400 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 7.40 m)	      
+opticsfile.6    : beta*_IP1/2/5/8=   6.30000  / 10.000 /  6.30000 / 6.300 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 6.30 m)	      
+opticsfile.7    : beta*_IP1/2/5/8=   5.30000  / 10.000 /  5.30000 / 5.300 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 5.30 m)	      
+opticsfile.8    : beta*_IP1/2/5/8=   4.40000  / 10.000 /  4.40000 / 4.400 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 4.40 m)	      
+opticsfile.9    : beta*_IP1/2/5/8=   3.60000  / 10.000 /  3.60000 / 3.600 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 3.60 m)	      
+opticsfile.10   : beta*_IP1/2/5/8=   3.10000  / 10.000 /  3.10000 / 3.100 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 3.10 m)	     
+opticsfile.11   : beta*_IP1/2/5/8=   2.30000  / 10.000 /  2.30000 / 3.000 ; ! CRDS (nominal pre-squeezed optics, beta*_presqueeze= 2.30 m)	    
+opticsfile.12   : beta*_IP1/2/5/8=   2.00000  / 10.000 /  2.00000 / 3.000 ; ! CRDS (new     pre-squeezed optics, beta*_presqueeze= 2.00 m) -> end of pre-squeezed sequence 
+opticsfile.13   : beta*_IP1/2/5/8=   1.82500  / 10.000 /  1.82500 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.9125)
+opticsfile.14   : beta*_IP1/2/5/8=   1.55000  / 10.000 /  1.55000 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.7750)
+opticsfile.15   : beta*_IP1/2/5/8=   1.22500  / 10.000 /  1.22500 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.6125)      
+opticsfile.16   : beta*_IP1/2/5/8=   0.95000  / 10.000 /  0.95000 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.4750) 
+opticsfile.17	: beta*_IP1/2/5/8=   0.77500  / 10.000 /  0.77500 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.3875)	  
+opticsfile.18	: beta*_IP1/2/5/8=   0.65000  / 10.000 /  0.65000 / 3.000 ; ! CRDS (tele-squeeze type,r_tele=1/0.3250)                     -> end of Tele-squeeze sequence	    
+opticsfile.19	: beta*_IP1/2/5/8=   0.55900  / 10.000 /  0.55900 / 3.000 ; ! Squeeze (pre-squeeze type, beta*_presqueeze= 1.72 m)  
+opticsfile.20	: beta*_IP1/2/5/8=   0.47450  / 10.000 /  0.47450 / 3.000 ; ! Squeeze (pre-squeeze type, beta*_presqueeze= 1.46 m)	  
+opticsfile.21	: beta*_IP1/2/5/8=   0.40300  / 10.000 /  0.40300 / 3.000 ; ! Squeeze (pre-squeeze type, beta*_presqueeze= 1.24 m)	  
+opticsfile.22	: beta*_IP1/2/5/8=   0.34450  / 10.000 /  0.34450 / 3.000 ; ! Squeeze (pre-squeeze type, beta*_presqueeze= 1.06 m) 
+opticsfile.23	: beta*_IP1/2/5/8=   0.29900  / 10.000 /  0.29900 / 3.000 ; ! Squeeze (pre-squeeze type, beta*_presqueeze= 0.92 m)         -> end of squeeze
+opticsfile.24	: beta*_IP1/2/5/8=   0.26975  / 10.000 /  0.26975 / 3.000 ; ! Beta*-levelling (pre-squeeze type, beta*_presqueeze= 0.83 m)
+opticsfile.25	: beta*_IP1/2/5/8=   0.25025  / 10.000 /  0.25025 / 3.000 ; ! Beta*-levelling (pre-squeeze type, beta*_presqueeze= 0.77 m)
+      
+
+
+
