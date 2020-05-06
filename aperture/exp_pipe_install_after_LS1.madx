@@ -4,6 +4,8 @@
 ! Revision of installation positions for LHCb beam pipe following new data provided by M. Gallilee  - 05/06/12
 ! Revision of installation positions for Alice beam pipe following new data provided by M. Gallilee - 05/06/12
 !
+! Revision LHCb left side closet to the IP LHC-VC8-EC-0001 v.0.1  R. De Maria 04/05/2020
+
 seqedit, sequence=lhcb1;
 
 install, element = ATLASpipe1.l1 , at =  0.00000, from= IP1.L1;
@@ -377,9 +379,17 @@ install, element = CMSpipe52.r5,at =18.85300, from = IP5;
 !install, element = IR5pipe60.r5,at =21.81033, from = IP5;
 !install, element = IR5pipe61.r5,at =22.18000, from = IP5;
 
-install, element = LHCbpipe1.l8 , at = 0.00000, from = IP8;
-install, element = LHCbpipe2.l8 , at =-0.33000, from = IP8;
-install, element = LHCbpipe3.l8 , at =-0.66000, from = IP8;
+!from josef 4/5/2020
+install, element = LHCbpipe1a.l8 , at = 0.00000, from = IP8; !VELO
+install, element = LHCbpipe2a.l8 , at =-0.33400, from = IP8; !VELO
+install, element = LHCbpipe3a.l8 , at =-0.53700, from = IP8; !VELO
+install, element = LHCbpipe4a.l8 , at =-0.75900, from = IP8; !VELO
+install, element = LHCbpipe5a.l8 , at =-0.80100, from = IP8; !VELO
+install, element = LHCbpipe6a.l8 , at =-0.87900, from = IP8; !LHCVC8V
+
+!install, element = LHCbpipe1.l8 , at = 0.00000, from = IP8;
+!install, element = LHCbpipe2.l8 , at =-0.33000, from = IP8;
+!install, element = LHCbpipe3.l8 , at =-0.66000, from = IP8;
 install, element = LHCbpipe4.l8 , at =-0.99000, from = IP8;
 install, element = LHCbpipe5.l8 , at =-1.32000, from = IP8;
 install, element = LHCbpipe6.l8 , at =-1.65000, from = IP8;
@@ -875,9 +885,22 @@ install, element = CMSpipe52.r5,at =18.85300, from = IP5;
 !install, element = IR5pipe60.r5,at =21.81033, from = IP5;
 !install, element = IR5pipe61.r5,at =22.18000, from = IP5;
 
-install, element = LHCbpipe1.l8 , at = 0.00000, from = IP8;
-install, element = LHCbpipe2.l8 , at =-0.33000, from = IP8;
-install, element = LHCbpipe3.l8 , at =-0.66000, from = IP8;
+!from josef 4/5/2020
+install, element = LHCbpipe1a.l8 , at = 0.00000, from = IP8; !VELO
+install, element = LHCbpipe2a.l8 , at =-0.33400, from = IP8; !VELO
+install, element = LHCbpipe3a.l8 , at =-0.53800, from = IP8; !VELO
+install, element = LHCbpipe4a.l8 , at =-0.61080, from = IP8; !VELO
+install, element = LHCbpipe5a.l8 , at =-0.73480, from = IP8; !VELO
+install, element = LHCbpipe6a.l8 , at =-0.80150, from = IP8; !LHCVC8V
+install, element = LHCbpipe7a.l8 , at =-0.82700, from = IP8; !LHCVC8V
+install, element = LHCbpipe8a.l8 , at =-0.97200, from = IP8; !LHCVC8V
+install, element = LHCbpipe9a.l8 , at =-1.04700, from = IP8;!VVGST
+install, element = LHCbpipe10a.l8, at =-1.14350, from = IP8;!VMAAR
+install, element = LHCbpipe11a.l8, at =-1.17950, from = IP8;!VMAAR
+
+!install, element = LHCbpipe1.l8 , at = 0.00000, from = IP8;
+!install, element = LHCbpipe2.l8 , at =-0.33000, from = IP8;
+!install, element = LHCbpipe3.l8 , at =-0.66000, from = IP8;
 install, element = LHCbpipe4.l8 , at =-0.99000, from = IP8;
 install, element = LHCbpipe5.l8 , at =-1.32000, from = IP8;
 install, element = LHCbpipe6.l8 , at =-1.65000, from = IP8;

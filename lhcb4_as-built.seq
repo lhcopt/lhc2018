@@ -14,6 +14,8 @@
 /************************************************************************************/
 /*                       GEOMETRY                                                   */
 /************************************************************************************/
+if (version>=50401){option,-rbarc;};
+
 
 REAL CONST LHCLENGTH           = 26658.8832;
 REAL CONST sep_ARC             = 0.194;
@@ -701,40 +703,40 @@ MBRS : RBEND, L := l.MBRS, Calib := Kmax_MBRS_4.5K / Imax_MBRS_4.5K;
 MBW : RBEND, L := l.MBW, Kmax := Kmax_MBW, Kmin := Kmin_MBW, Calib := Kmax_MBW / Imax_MBW;
 MBX : RBEND, L := l.MBX, Kmax := Kmax_MBX, Kmin := Kmin_MBX, Calib := Kmax_MBX / Imax_MBX;
 MBXW : RBEND, L := l.MBXW, Kmax := Kmax_MBXW, Kmin := Kmin_MBXW, Calib := Kmax_MBXW / Imax_MBXW;
-//---------------------- RCOLLIMATOR    ---------------------------------------------
-TANAL : RCOLLIMATOR, L := l.TANAL;
-TANAR : RCOLLIMATOR, L := l.TANAR;
-TANC : RCOLLIMATOR, L := l.TANC;
-TAS : RCOLLIMATOR, L := l.TAS;
-TASB : RCOLLIMATOR, L := l.TASB;
-TCAPA019 : RCOLLIMATOR, L := l.TCAPA019;
-TCAPA020 : RCOLLIMATOR, L := l.TCAPA020;
-TCAPB : RCOLLIMATOR, L := l.TCAPB;
-TCAPC : RCOLLIMATOR, L := l.TCAPC;
-TCAPD : RCOLLIMATOR, L := l.TCAPD;
-TCDD : RCOLLIMATOR, L := l.TCDD;
-TCDDM : RCOLLIMATOR, L := l.TCDDM;
-TCDQA : RCOLLIMATOR, L := l.TCDQA;
-TCDQM : RCOLLIMATOR, L := l.TCDQM;
-TCDSA : RCOLLIMATOR, L := l.TCDSA;
-TCDSB : RCOLLIMATOR, L := l.TCDSB;
-TCL : RCOLLIMATOR, L := l.TCL;
-TCLA : RCOLLIMATOR, L := l.TCLA;
-TCLIA : RCOLLIMATOR, L := l.TCLIA;
-TCLIB : RCOLLIMATOR, L := l.TCLIB;
-TCLIM : RCOLLIMATOR, L := l.TCLIM;
-TCLVW : RCOLLIMATOR, L := l.TCLVW;
-TCP : RCOLLIMATOR, L := l.TCP;
-TCPCH : RCOLLIMATOR, L := l.TCPCH;
-TCPCV : RCOLLIMATOR, L := l.TCPCV;
-TCSG : RCOLLIMATOR, L := l.TCSG;
-TCSP : RCOLLIMATOR, L := l.TCSP;
-TCSPM : RCOLLIMATOR, L := l.TCSPM;
-TCTPH : RCOLLIMATOR, L := l.TCTPH;
-TCTPV : RCOLLIMATOR, L := l.TCTPV;
-TDI : RCOLLIMATOR, L := l.TDI;
-XRPH : RCOLLIMATOR, L := l.XRPH;
-XRPV : RCOLLIMATOR, L := l.XRPV;
+//---------------------- COLLIMATOR    ---------------------------------------------
+TANAL : COLLIMATOR, L := l.TANAL;
+TANAR : COLLIMATOR, L := l.TANAR;
+TANC : COLLIMATOR, L := l.TANC;
+TAS : COLLIMATOR, L := l.TAS;
+TASB : COLLIMATOR, L := l.TASB;
+TCAPA019 : COLLIMATOR, L := l.TCAPA019;
+TCAPA020 : COLLIMATOR, L := l.TCAPA020;
+TCAPB : COLLIMATOR, L := l.TCAPB;
+TCAPC : COLLIMATOR, L := l.TCAPC;
+TCAPD : COLLIMATOR, L := l.TCAPD;
+TCDD : COLLIMATOR, L := l.TCDD;
+TCDDM : COLLIMATOR, L := l.TCDDM;
+TCDQA : COLLIMATOR, L := l.TCDQA;
+TCDQM : COLLIMATOR, L := l.TCDQM;
+TCDSA : COLLIMATOR, L := l.TCDSA;
+TCDSB : COLLIMATOR, L := l.TCDSB;
+TCL : COLLIMATOR, L := l.TCL;
+TCLA : COLLIMATOR, L := l.TCLA;
+TCLIA : COLLIMATOR, L := l.TCLIA;
+TCLIB : COLLIMATOR, L := l.TCLIB;
+TCLIM : COLLIMATOR, L := l.TCLIM;
+TCLVW : COLLIMATOR, L := l.TCLVW;
+TCP : COLLIMATOR, L := l.TCP;
+TCPCH : COLLIMATOR, L := l.TCPCH;
+TCPCV : COLLIMATOR, L := l.TCPCV;
+TCSG : COLLIMATOR, L := l.TCSG;
+TCSP : COLLIMATOR, L := l.TCSP;
+TCSPM : COLLIMATOR, L := l.TCSPM;
+TCTPH : COLLIMATOR, L := l.TCTPH;
+TCTPV : COLLIMATOR, L := l.TCTPV;
+TDI : COLLIMATOR, L := l.TDI;
+XRPH : COLLIMATOR, L := l.XRPH;
+XRPV : COLLIMATOR, L := l.XRPV;
 //---------------------- RFCAVITY       ---------------------------------------------
 ACSCA : RFCAVITY, L := l.ACSCA, HARMON := HRF400;
 //---------------------- SBEND          ---------------------------------------------
